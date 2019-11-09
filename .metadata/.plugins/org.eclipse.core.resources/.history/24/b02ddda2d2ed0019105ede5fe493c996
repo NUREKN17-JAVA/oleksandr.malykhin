@@ -1,0 +1,6 @@
+<project name = "UM" basedir = "." default = "compile">
+	<property name = "main-java-dir" value = "${basedir}/src/main/java"/>
+	<target name="compile">
+		<javac srcdir = "${main-java-dir}" destdir="${build-dir}"/>
+	</target>
+</project>

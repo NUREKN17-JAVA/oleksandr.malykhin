@@ -1,0 +1,16 @@
+package UM.malykhin.nure.db;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import junit.framework.TestCase;
+
+class HsqldbUserDaoTest {
+
+	@Test
+	void testCreate() {
+		fail("Not yet implemented");
+	}
+
+}

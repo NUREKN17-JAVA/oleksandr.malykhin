@@ -1,0 +1,5 @@
+package UM.malykhin.nure.db;
+
+public interface UserDao {
+
+}

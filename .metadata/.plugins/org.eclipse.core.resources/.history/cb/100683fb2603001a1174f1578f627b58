@@ -1,0 +1,43 @@
+package UM.malykhin.nure.db;
+
+import org.hsqldb.Collation;
+
+import UM.malykhin.nure.User;
+
+public class HsqldbUserDao implements UserDao {
+
+	public HsqldbUserDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public User create(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public User find(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collation findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
