@@ -1,0 +1,24 @@
+package UM.malykhin.nure.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import javax.management.RuntimeErrorException;
+
+public class ConnectionFactoryImpl implements ConnectionFactory {
+
+	@Override
+	public Connection createConnection() throws DatabaseException {
+		String url = "jdbc:hsqldb:file:db/UM";
+		String user = "sa";
+		String password = "";
+		String driven = "org.hsqldb.jdbcDriven";
+		try {
+			Class.forName(driven);
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		return DriverManager.getConnection(url, user, password);
+	}
+
+}

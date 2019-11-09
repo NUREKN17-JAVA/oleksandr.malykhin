@@ -12,20 +12,17 @@ import UM.malykhin.nure.User;
 
 
 public class HsqldbUserDaoTest extends TestCase{
-	HsqldbUserDao dao;
-	
+	private HsqldbUserDao dao;
+	private ConnectionFactory connectionFactory;
 	
 	
 	
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
-		dao = new HsqldbUserDao();
+		connectionFactory = new ConnectionFactoryImpl();
+		dao = new HsqldbUserDao(connectionFactory);
 	}
-
-
-
-
 	public void testCreate() {
 		try {
 			User user = new User();
