@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="HsqldbUserDaoTest" project="UM" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="UM.malykhin.nure.db.HsqldbUserDaoTest" time="0.253" displayname="HsqldbUserDaoTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.HsqldbUserDaoTest]">
-    <testcase name="testFindAll" classname="UM.malykhin.nure.db.HsqldbUserDaoTest" time="0.239" displayname="testFindAll" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.HsqldbUserDaoTest]/[test:testFindAll(UM.malykhin.nure.db.HsqldbUserDaoTest)]"/>
-    <testcase name="testCreate" classname="UM.malykhin.nure.db.HsqldbUserDaoTest" time="0.014" displayname="testCreate" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.HsqldbUserDaoTest]/[test:testCreate(UM.malykhin.nure.db.HsqldbUserDaoTest)]"/>
-  </testsuite>
-</testrun>

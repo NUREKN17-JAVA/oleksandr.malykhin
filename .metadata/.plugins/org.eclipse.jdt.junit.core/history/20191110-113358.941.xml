@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="HsqldbUserDaoTest" project="UM" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="UM.malykhin.nure.db.HsqldbUserDaoTest" time="0.164" displayname="HsqldbUserDaoTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.HsqldbUserDaoTest]">
-    <testcase name="testCreate" classname="UM.malykhin.nure.db.HsqldbUserDaoTest" time="0.164" displayname="testCreate" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.HsqldbUserDaoTest]/[test:testCreate(UM.malykhin.nure.db.HsqldbUserDaoTest)]"/>
-  </testsuite>
-</testrun>

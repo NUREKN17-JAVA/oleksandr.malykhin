@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DaoFactoryTest" project="UM" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="UM.malykhin.nure.db.DaoFactoryTest" time="0.002" displayname="DaoFactoryTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]">
-    <testcase name="testGetUserDao" classname="UM.malykhin.nure.db.DaoFactoryTest" time="0.002" displayname="testGetUserDao" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]/[test:testGetUserDao(UM.malykhin.nure.db.DaoFactoryTest)]"/>
-  </testsuite>
-</testrun>

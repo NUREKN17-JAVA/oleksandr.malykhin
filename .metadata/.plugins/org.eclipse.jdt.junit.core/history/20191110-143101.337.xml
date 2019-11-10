@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UserTest" project="UM" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="UM.malykhin.nure.UserTest" time="0.013" displayname="UserTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.UserTest]">
-    <testcase name="testGetFullName" classname="UM.malykhin.nure.UserTest" time="0.009" displayname="testGetFullName" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.UserTest]/[test:testGetFullName(UM.malykhin.nure.UserTest)]"/>
-    <testcase name="testGetFullInformation" classname="UM.malykhin.nure.UserTest" time="0.0" displayname="testGetFullInformation" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.UserTest]/[test:testGetFullInformation(UM.malykhin.nure.UserTest)]"/>
-    <testcase name="testGetContact" classname="UM.malykhin.nure.UserTest" time="0.001" displayname="testGetContact" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.UserTest]/[test:testGetContact(UM.malykhin.nure.UserTest)]"/>
-    <testcase name="testGetAge" classname="UM.malykhin.nure.UserTest" time="0.003" displayname="testGetAge" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.UserTest]/[test:testGetAge(UM.malykhin.nure.UserTest)]"/>
-  </testsuite>
-</testrun>
