@@ -5,6 +5,7 @@ import java.util.Collection;
 import UM.malykhin.nure.User;
 
 public interface UserDao {
+	
 	User create(User user) throws DatabaseException;
 	
 	void update(User user) throws DatabaseException;
@@ -14,4 +15,7 @@ public interface UserDao {
 	User find(Long id) throws DatabaseException;
 	
 	Collection findAll() throws DatabaseException;
+	
+	void setConnectionFactory(ConnectionFactory connectionFactory);
+
 }

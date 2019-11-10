@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DaoFactoryTest" project="UM" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="UM.malykhin.nure.db.DaoFactoryTest" time="0.005" displayname="DaoFactoryTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]">
+    <testcase name="junit.framework.TestSuite$1" classname="junit.framework.TestSuite.1" time="0.005" displayname="warning" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]/[test:warning(junit.framework.TestSuite$1)]">
+      <failure>junit.framework.AssertionFailedError: Exception in constructor: testGetUserDao (java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert "}" to complete ClassBody
+&#13;
+	at UM.malykhin.nure.db.DaoFactoryTest.&lt;init&gt;(DaoFactoryTest.java:21)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:60)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:307)&#13;
+	at junit.framework.TestSuite.addTestsFromTestCase(TestSuite.java:150)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:129)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.&lt;init&gt;(JUnit38ClassRunner.java:74)&#13;
+	at org.junit.internal.builders.JUnit3Builder.runnerForClass(JUnit3Builder.java:11)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder.runnerForClass(DefensiveAllDefaultPossibilitiesBuilder.java:56)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.vintage.engine.discovery.ClassSelectorResolver.resolveTestClass(ClassSelectorResolver.java:66)&#13;
+	at org.junit.vintage.engine.discovery.ClassSelectorResolver.resolve(ClassSelectorResolver.java:47)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.lambda$resolve$2(EngineDiscoveryRequestResolution.java:129)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:174)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:120)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:87)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.run(EngineDiscoveryRequestResolution.java:80)&#13;
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.resolve(EngineDiscoveryRequestResolver.java:112)&#13;
+	at org.junit.vintage.engine.discovery.VintageDiscoverer.discover(VintageDiscoverer.java:42)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.discover(VintageTestEngine.java:62)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discoverEngineRoot(DefaultLauncher.java:177)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discoverRoot(DefaultLauncher.java:164)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:120)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.&lt;init&gt;(JUnit5TestReference.java:45)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createUnfilteredTest(JUnit5TestLoader.java:76)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createTest(JUnit5TestLoader.java:66)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.loadTests(JUnit5TestLoader.java:53)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:525)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+)&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.TestCase.fail(TestCase.java:227)&#13;
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:97)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)&#13;
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.Iterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -18,10 +18,33 @@ public class HsqldbUserDao implements UserDao {
 	private static final String INSERT_QUERY = "INSERT INTO users (firstname, lastname, dateofbirth) VALUES (?, ?, ?)";
 	private ConnectionFactory connectionFactory;
 	
+	public HsqldbUserDao() {
+
+	}
+	
 	public HsqldbUserDao(ConnectionFactory ConnectionFactory) {
 		this.connectionFactory = ConnectionFactory;
 	}
 	
+
+	@Override
+	public void update(User user) throws DatabaseException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(User user) throws DatabaseException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public User find(Long id) throws DatabaseException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Override
 	public User create(User user) throws DatabaseException {
 		try {
@@ -51,25 +74,7 @@ public class HsqldbUserDao implements UserDao {
 			throw new DatabaseException(e);
 		}
 	}
-
-	@Override
-	public void update(User user) throws DatabaseException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void delete(User user) throws DatabaseException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public User find(Long id) throws DatabaseException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	@Override
 	public Collection findAll() throws DatabaseException {
 		Collection result = new LinkedList();
@@ -95,4 +100,11 @@ public class HsqldbUserDao implements UserDao {
 		return result;
 	}
 
+	public ConnectionFactory getConnectionFactory() {
+		return connectionFactory;
+	}
+
+	public void setConnectionFactory(ConnectionFactory connectionFactory) {
+		this.connectionFactory = connectionFactory;
+	}
 }

@@ -1,0 +1,6 @@
+connection.driver=org.hsqldb.jdbcDriver
+connection.url=jdbc:hsqldb:file:db/UM
+connection.user=sa
+connection.password=
+
+dao.UM.malykhin.nure.db.UserDao = dao.UM.malykhin.nure.db.UserDao

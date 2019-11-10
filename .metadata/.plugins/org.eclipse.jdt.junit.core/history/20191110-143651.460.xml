@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DaoFactoryTest" project="UM" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="UM.malykhin.nure.db.DaoFactoryTest" time="0.006" displayname="DaoFactoryTest" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]">
+    <testcase name="testGetUserDao" classname="UM.malykhin.nure.db.DaoFactoryTest" time="0.006" displayname="testGetUserDao" uniqueid="[engine:junit-vintage]/[runner:UM.malykhin.nure.db.DaoFactoryTest]/[test:testGetUserDao(UM.malykhin.nure.db.DaoFactoryTest)]">
+      <failure>junit.framework.AssertionFailedError: java.lang.RuntimeException: java.lang.ClassNotFoundException: java.UM.malykhin.db.UserDao&#13;
+	at junit.framework.Assert.fail(Assert.java:57)&#13;
+	at junit.framework.TestCase.fail(TestCase.java:227)&#13;
+	at UM.malykhin.nure.db.DaoFactoryTest.testGetUserDao(DaoFactoryTest.java:19)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:176)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:141)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:122)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:142)&#13;
+	at junit.framework.TestResult.run(TestResult.java:125)&#13;
+	at junit.framework.TestCase.run(TestCase.java:129)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:247)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)&#13;
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.Iterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>
