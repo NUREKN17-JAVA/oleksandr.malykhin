@@ -2,3 +2,4 @@
 1573330086573	Delete element
 1573330307878	Delete element
 1573333885348	Extract constant 'INSERT_QUERY'
+1573381584134	Extract constant 'SELECT_ALL_QUERY'

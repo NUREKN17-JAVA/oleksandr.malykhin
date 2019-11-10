@@ -1,9 +1,0 @@
-<project name = "UM" basedir = "." default = "compile" fork="yes">
-	
-	<property name = "main-java-dir" value = "${basedir}/src/main/java"/>
-	<property name = "build-dir" value = "${basedir}/bin"/>
-	
-	<target name="compile">
-		<javac srcdir = "${main-java-dir}" destdir="${build-dir}"/>
-	</target>
-</project>
