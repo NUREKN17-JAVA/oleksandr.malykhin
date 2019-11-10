@@ -1,6 +1,0 @@
-connection.driver=org.hsqldb.jdbcDriver
-connection.url=jdbc:hsqldb:file:db/UM
-connection.user=sa
-connection.password=
-
-java.UM.malykhin.db.UserDao=java.UM.malykhin.db.UserDao

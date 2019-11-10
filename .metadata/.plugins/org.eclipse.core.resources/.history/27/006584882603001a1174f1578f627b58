@@ -1,9 +1,0 @@
-package UM.malykhin.nure.db;
-
-import org.dbunit.DatabaseUnitException;
-
-import UM.malykhin.nure.User;
-
-public interface UserDao {
-	User create(User user) throws DatabaseException;
-}

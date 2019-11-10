@@ -1,9 +1,0 @@
-package UM.malykhin.nure.db;
-
-public class DatabaseException {
-
-	public DatabaseException() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

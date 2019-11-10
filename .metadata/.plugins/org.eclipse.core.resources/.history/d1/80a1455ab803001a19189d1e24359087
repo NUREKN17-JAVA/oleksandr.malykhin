@@ -1,6 +1,0 @@
-connection.driver=org.hsqldb.jdbcDriver
-connection.url=jdbc:hsqldb:file:db/UM
-connection.user=sa
-connection.password=
-
-dao.knure.ctde.UM.db.UserDao=knure.ctde.UM.db.HsqldbUserDao
