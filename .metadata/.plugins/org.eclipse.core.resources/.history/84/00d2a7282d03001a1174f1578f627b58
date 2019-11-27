@@ -1,8 +1,0 @@
-package UM.malykhin.nure.db;
-
-public class Snippet {
-	public static void main(String[] args) {
-		HsqldbUserDaoTest
-	}
-}
-
