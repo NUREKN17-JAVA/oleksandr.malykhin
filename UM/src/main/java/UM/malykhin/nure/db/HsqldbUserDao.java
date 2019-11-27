@@ -33,7 +33,7 @@ public class HsqldbUserDao implements UserDao {
 	}
 	
 	
-	
+
 	@Override
 	public void update(User user) throws DatabaseException {
 		PreparedStatement preparedStatement = null;
