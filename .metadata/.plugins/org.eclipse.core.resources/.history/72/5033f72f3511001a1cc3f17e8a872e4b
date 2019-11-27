@@ -1,7 +1,7 @@
 package UM.malykhin.nure.db;
 
 import junit.framework.TestCase;
-
+import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Date;
@@ -15,7 +15,7 @@ import org.dbunit.database.DatabaseConnection;
 import org.dbunit.database.IDatabaseConnection;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.XmlDataSet;
-import org.hsqldb.lib.Collection;
+
 
 public class HsqldbUserDaoTest extends DatabaseTestCase {
 	
@@ -50,7 +50,7 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 	
 	public void testFindAll() {
 		try {
-			java.util.Collection collection = dao.findAll();
+			Collection collection = dao.findAll();
             assertNotNull("Collection is null", collection);
             assertEquals("Collection size.", 2, collection.size());
 		} catch (DatabaseException e) {
@@ -59,6 +59,7 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 		}
 	}
 	
+    
     public void testFindID() {
         long id = TEST_ID;
         try {
@@ -112,6 +113,8 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
         return user;
     }
 	
+	
+
 	@Override
 	protected IDatabaseConnection getConnection() throws Exception {
 		connectionFactory = new ConnectionFactoryImpl("org.hsqldb.jdbcDriver", "jdbc:hsqldb:file:db/UM", "sa", "");
