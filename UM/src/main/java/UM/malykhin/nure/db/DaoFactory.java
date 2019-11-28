@@ -25,7 +25,6 @@ public abstract class DaoFactory {
 			throw new RuntimeException(e);
 		}
 	}
-	
 	public static synchronized DaoFactory getInstance() {
 		if(instance == null) {
 			Class factoryClass;
@@ -54,7 +53,7 @@ public abstract class DaoFactory {
 		return new ConnectionFactoryImpl(properties);
 	}
 	
-	public abstract UserDao getUserDao() {
+	public abstract UserDao getUserDao(); {
 		UserDao result = null;
 		try {
 			Class clazz = Class.forName(properties.getProperty(USER_DAO));

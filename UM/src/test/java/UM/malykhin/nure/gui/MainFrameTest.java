@@ -3,19 +3,18 @@ package UM.malykhin.nure.gui;
 import java.awt.Component;
 import java.awt.Window;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTable;
 
 import junit.extensions.jfcunit.JFCTestCase;
 import junit.extensions.jfcunit.JFCTestHelper;
 import junit.extensions.jfcunit.finder.NamedComponentFinder;
 
-class MainFrameTest extends JFCTestCase {
+public class MainFrameTest extends JFCTestCase {
 
 	private Window mainFrame;
 
-	@BeforeEach
 	protected void setUp() throws Exception {
 		super.setUp();
 		setHelper(new JFCTestHelper());
@@ -23,7 +22,6 @@ class MainFrameTest extends JFCTestCase {
 		mainFrame.setVisible(true);
 	}
 
-	@AfterEach
 	protected void tearDown() throws Exception {
 		mainFrame.setVisible(false);
 		getHelper().cleanUp(this);
@@ -34,17 +32,19 @@ class MainFrameTest extends JFCTestCase {
 	{
 		NamedComponentFinder finder;
 		finder = new NamedComponentFinder(componentClass,name);
+		finder.setWait(0);
 		Component component = finder.find(mainFrame, 0);
 		assertNotNull("Could not find component '" + name +"'", component);
 		return component;
 	}
 	
-	
-	
-	
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testBrowseControls() {
+		find(JPanel.class, "browsePanel");
+		find(JTable.class, "userTable");
+		find(JButton.class, "addButton");
+		find(JButton.class, "editButton");
+		find(JButton.class, "deleteButton");
+		find(JButton.class, "detailsButton");
 	}
 
 }

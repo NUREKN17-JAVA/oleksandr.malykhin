@@ -14,5 +14,4 @@ public class DaoFactoryImpl extends DaoFactory {
 		}
 		return result;
 	}
-
 }
