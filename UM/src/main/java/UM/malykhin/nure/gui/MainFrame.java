@@ -7,12 +7,16 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import UM.malykhin.nure.util.Messages;
+
+
 public class MainFrame extends JFrame {
 	
 	private static final int FRAME_HEIGHT = 600;
 	private static final int FRAME_WIDTH = 800;
 	private JPanel contentPanel;
 	private JPanel browsePanel;
+	private AddPanel addPanel;
 
 	public MainFrame()
 	{
@@ -24,7 +28,7 @@ public class MainFrame extends JFrame {
 	private void initialize() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		this.setTitle("Управление пользователями");
+		this.setTitle(Messages.getString("MainFrame.U_M")); //$NON-NLS-1$
 		this.setContentPane(getContentPanel());
 	}
 		private JPanel getContentPanel()
@@ -67,8 +71,11 @@ public class MainFrame extends JFrame {
 
 
 	private AddPanel getAddPanel() {
-		// TODO Auto-generated method stub
-		return null;
+		if(addPanel == null)
+		{
+			addPanel = new AddPanel(this);
+		}
+		return addPanel;
 	}
 
 }

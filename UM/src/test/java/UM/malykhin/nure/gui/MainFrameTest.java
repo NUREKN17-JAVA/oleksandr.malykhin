@@ -42,7 +42,12 @@ public class MainFrameTest extends JFCTestCase {
 	
 	public void testBrowseControls() {
 		find(JPanel.class, "browsePanel");
-		find(JTable.class, "userTable");
+		JTable table = (JTable) find(JTable.class, "userTable");
+		assertEquals(3, table.getColumnCount());
+		assertEquals("ID", table.getColumnName(0));
+		assertEquals("Имя", table.getColumnName(1));
+		assertEquals("Фамилия", table.getColumnName(2));
+		
 		find(JButton.class, "addButton");
 		find(JButton.class, "editButton");
 		find(JButton.class, "deleteButton");
@@ -57,7 +62,7 @@ public class MainFrameTest extends JFCTestCase {
 		
 		find(JTextField.class, "firstNameField");
 		find(JTextField.class, "lastNameField");
-		find(JTextField.class, "dateOfbithField");
+		find(JTextField.class, "dateOfBirthField");
 		find(JButton.class, "okButton");
 		find(JButton.class, "cancelButton");
 	}
