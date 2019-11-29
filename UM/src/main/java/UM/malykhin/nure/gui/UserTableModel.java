@@ -7,11 +7,13 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import UM.malykhin.nure.User;
+import UM.malykhin.nure.util.Messages;
 
 public class UserTableModel extends AbstractTableModel {
 
-	private static final String[] COLUMN_NAMES = {"ID", "Имя", "Фамилия"};
+	private static final String[] COLUMN_NAMES = {"ID", Messages.getString("UserTableModel.first_name"), Messages.getString("UserTableModel.last_name")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	private static final Class[] COLUMN_CLASSES = {Long.class, String.class, String.class,};
+	
 	private List users = null;
 	
 	public UserTableModel(Collection users)
@@ -43,9 +45,9 @@ public class UserTableModel extends AbstractTableModel {
 	}
 
 	@Override
-	public Object getValueAt(int rowIndex, int columIndex) {
+	public Object getValueAt(int rowIndex, int columnIndex) {
 		User user = (User) users.get(rowIndex);
-		switch (columIndex)
+		switch(columnIndex)
 		{
 		case 0:
 			return user.getId();
