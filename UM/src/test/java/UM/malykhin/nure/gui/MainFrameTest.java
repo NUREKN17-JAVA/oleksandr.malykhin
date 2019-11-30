@@ -3,13 +3,19 @@ package UM.malykhin.nure.gui;
 import java.awt.Component;
 import java.awt.Window;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Properties;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import UM.malykhin.nure.db.DaoFactory;
+import UM.malykhin.nure.db.DaoFactoryImpl;
+import UM.malykhin.nure.db.MockUserDao;
 import junit.extensions.jfcunit.JFCTestCase;
 import junit.extensions.jfcunit.JFCTestHelper;
 import junit.extensions.jfcunit.eventdata.MouseEventData;
@@ -22,6 +28,15 @@ public class MainFrameTest extends JFCTestCase {
 
 	protected void setUp() throws Exception {
 		super.setUp();
+		
+		Properties properties = new Properties();
+		properties.setProperty("dao.UM.malykhin.nure.db.UserDao", 
+				MockUserDao.class.getName());
+		properties.setProperty("dao.factory", DaoFactoryImpl.class
+				.getName());
+		
+		DaoFactory.getInstance().init(properties);
+		
 		setHelper(new JFCTestHelper());
 		mainFrame = new MainFrame();
 		mainFrame.setVisible(true);

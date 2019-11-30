@@ -15,22 +15,21 @@ public abstract class DaoFactory {
 	protected static Properties properties;
 	
 	private static DaoFactory instance;
-	    
+	
 	static {
 		properties = new Properties();
 		try {
-			properties.load(DaoFactory.class.getClassLoader()
-					.getResourceAsStream("settings.properties"));
+			properties.load(DaoFactory.class.getClassLoader().getResourceAsStream("settings.properties"));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 	}
+	
 	public static synchronized DaoFactory getInstance() {
-		if(instance == null) {
+		if (instance == null) {
 			Class factoryClass;
 			try {
-				factoryClass = Class.forName(properties
-						.getProperty(DAO_FACTORY));
+				factoryClass = Class.forName(properties.getProperty(DAO_FACTORY));
 				instance = (DaoFactory) factoryClass.newInstance();
 			} catch (Exception e) {
 				throw new RuntimeException(e);
@@ -38,13 +37,12 @@ public abstract class DaoFactory {
 		}
 		return instance;
 	}
-
+	
 	protected DaoFactory() {
-
+		
 	}
-
-	public static void init (Properties prop)
-	{
+	
+	public static void init(Properties prop) {
 		properties = prop;
 		instance = null;
 	}
@@ -53,16 +51,5 @@ public abstract class DaoFactory {
 		return new ConnectionFactoryImpl(properties);
 	}
 	
-	public abstract UserDao getUserDao(); {
-		UserDao result = null;
-		try {
-			Class clazz = Class.forName(properties.getProperty(USER_DAO));
-			result = (UserDao) clazz.newInstance();
-			result.setConnectionFactory(getConnectionFactory());
-		}catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-		return result;
-	}
-	
+	public abstract UserDao getUserDao();
 }
