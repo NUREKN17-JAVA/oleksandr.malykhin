@@ -112,7 +112,7 @@ public class BrowsePanel extends JPanel implements ActionListener {
 			userTable = new JTable();
 			userTable.setName("userTable"); //$NON-NLS-1$
 		}
-		initTable();
+		//initTable();
 		return userTable;
 	}
 

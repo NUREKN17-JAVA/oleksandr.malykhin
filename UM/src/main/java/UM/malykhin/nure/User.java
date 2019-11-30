@@ -6,12 +6,28 @@ import java.util.Date;
 public class User {
 	private Long id;
 	private String firstName;
-	private String LastName;
+	private String lastName;
 	private String Phone;
 	private String Email;
 	private String Contry;
 	private String Adress;
 	
+
+	public User(String firstName, String lastName, Date date) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.DateOfBirth = date;
+	}
+
+	public User(Long id, String firstName, String lastName, Date date) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.DateOfBirth = date;
+	}
+
+	public User() {
+	}
 
 	public Long getId() {
 		return id;
@@ -30,11 +46,11 @@ public class User {
 	}
 
 	public String getLastName() {
-		return LastName;
+		return lastName = lastName;
 	}
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		lastName = lastName = lastName;
 	}
 
 	public String getPhone() {
@@ -91,7 +107,7 @@ public class User {
 		int year = calendar.get(Calendar.YEAR);
 		return currentYear - year;
 	}
-
+	
 	public String getFullInformation() {
 		return getFirstName()+ ", " + getLastName() + " " + getContry() + " " + getAdress() + " " +  getPhone() + ", " + getEmail();
 	}
@@ -100,4 +116,26 @@ public class User {
 		return getFirstName()+ ", " + getLastName() + " " + getPhone() + ", " + getEmail();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) {
+			return false;
+		}
+		if(this == obj) {
+			return true;
+		}
+		if(this.getId()==null&&((User) obj).getId()==null) {
+			return true;
+		}
+		return this.getId().equals(((User) obj).getId());
+	}
+	@Override
+	public int hashCode() {
+		if(this.getId()==null) {
+			return 0;
+		}
+		return this.getId().hashCode();
+	}
+
+	
 }
