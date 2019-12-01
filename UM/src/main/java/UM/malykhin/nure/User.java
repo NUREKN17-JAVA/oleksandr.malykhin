@@ -1,9 +1,10 @@
 package UM.malykhin.nure;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
 	private Long id;
 	private String firstName;
 	private String lastName;
@@ -11,19 +12,20 @@ public class User {
 	private String Email;
 	private String Contry;
 	private String Adress;
+	private Date dateOfBirth;
 	
 
-	public User(String firstName, String lastName, Date date) {
+	public User(String firstName, String lastName, Date dateOfBirth) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.DateOfBirth = date;
+		this.dateOfBirth = dateOfBirth;
 	}
 
-	public User(Long id, String firstName, String lastName, Date date) {
+	public User(Long id, String firstName, String lastName, Date now) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.DateOfBirth = date;
+		this.dateOfBirth = now;
 	}
 
 	public User() {
@@ -50,7 +52,7 @@ public class User {
 	}
 
 	public void setLastName(String lastName) {
-		lastName = lastName = lastName;
+		this.lastName = lastName;
 	}
 
 	public String getPhone() {
@@ -86,14 +88,12 @@ public class User {
 	}
 
 	public Date getDateOfBirth() {
-		return DateOfBirth;
+		return dateOfBirth;
 	}
 
 	public void setDateOfBirth(Date dateOfBirth) {
-		DateOfBirth = dateOfBirth;
+		this.dateOfBirth = dateOfBirth;
 	}
-
-	private Date DateOfBirth;
 	
 	public String getFullName() {
 		return getLastName()+ ", " + getFirstName();
