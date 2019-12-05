@@ -1,0 +1,11 @@
+package UM.malykhin.nure.db;
+
+public class MockDaoFactory extends DaoFactory {
+
+	@Override
+	public UserDao getUserDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

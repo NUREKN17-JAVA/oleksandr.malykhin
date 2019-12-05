@@ -1,0 +1,15 @@
+package UM.malykhin.nure.db;
+
+import com.mockobjects.dynamic.Mock;
+
+public class MockDaoFactory extends DaoFactory {
+	
+	private Mock
+	
+	@Override
+	public UserDao getUserDao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

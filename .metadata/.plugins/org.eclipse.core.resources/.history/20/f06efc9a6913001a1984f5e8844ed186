@@ -1,0 +1,22 @@
+package UM.malykhin.nure.db;
+
+public class MockDaoFactory extends DaoFactory {
+
+	@Override
+	public class MockDaoFactory extends DaoFactory {
+		private Mock mockUserDao;
+
+		public MockDaoFactory() {
+			mockUserDao = new Mock(Dao.class);
+		}
+
+		public Mock getMockUserDao() {
+			return mockUserDao;
+		}
+		@Override
+		public Dao<User> getUserDao() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+	}

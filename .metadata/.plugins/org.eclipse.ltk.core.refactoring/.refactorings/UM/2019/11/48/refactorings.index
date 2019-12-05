@@ -1,0 +1,26 @@
+1574886972477	Extract constant 'FRAME_WIDTH'
+1574886997109	Extract constant 'FRAME_HEIGHT'
+1574953035310	Delete element
+1574954024463	Delete element
+1574954304484	Delete element
+1574954521989	Delete element
+1575027611164	Rename method 'getDayOfBirthField'
+1575032086972	Rename package 'UM.malykhin.nure.utill'
+1575033389054	Delete element
+1575042073186	Move compilation unit
+1575042471104	Rename local variable 'userTable'
+1575046420090	Extract method 'initTable'
+1575114199746	Extract method 'initTable'
+1575116065079	Move compilation unit
+1575117975570	Extract local variable 'firstName'
+1575118153129	Extract local variable 'now'
+1575141434820	Extract constant 'MOCK_FIND_ALL_COMMAND'
+1575143594506	Extract constant 'MOCK_CREATE_COMMAND'
+1575144002844	Extract constant 'MOCK_CREATE_COMMAND'
+1575144023422	Extract constant 'MOCK_FIND_ALL_COMMAND'
+1575144042042	Extract constant 'USER_TABLE_COMPONENT_NAME'
+1575144059326	Extract constant 'ADD_BUTTON_COMPONENT_NAME'
+1575144083178	Extract constant 'ADD_PANEL_COMPONENT_NAME'
+1575144150932	Extract constant 'OK_BUTTON_COMPONENT_NAME'
+1575144164192	Extract constant 'CANCEL_BUTTON_COMPONENT_NAME'
+1575144180464	Extract constant 'BROWSE_PANEL_COMPONENT_NAME'

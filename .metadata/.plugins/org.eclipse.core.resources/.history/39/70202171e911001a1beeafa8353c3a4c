@@ -1,0 +1,40 @@
+package UM.malykhin.nure.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Component;
+
+import javax.swing.JPanel;
+
+public class BrowsePanel extends JPanel {
+
+	private MainFrame parent;
+	private JPanel buttonPanel;
+
+	public BrowsePanel(MainFrame frame) {
+		parent = frame;
+		initialize();
+	}
+
+	private void initialize() {
+		this.setLayout(new BorderLayout());
+		this.add(getTablePanel(),BorderLayout.CENTER);
+		this.add(getButtonsPanel(), BorderLayout.SOUTH);
+	}
+
+	private JPanel getButtonsPanel() {
+		if(buttonPanel == null)
+		{
+			buttonPanel = new JPanel();
+			buttonPanel.add(getAddButton(), null);
+			buttonPanel.add(getAddButton(), null);
+			buttonPanel.add(getAddButton(), null);
+			buttonPanel.add(getAddButton(), null);
+		}
+		return buttonPanel;
+	}
+
+	private JPanel getTablePanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,66 @@
+package UM.malykhin.nure.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Component;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class BrowsePanel extends JPanel {
+
+	private MainFrame parent;
+	private JPanel buttonPanel;
+	private JButton addButton;
+
+	public BrowsePanel(MainFrame frame) {
+		parent = frame;
+		initialize();
+	}
+
+	private void initialize() {
+		this.setLayout(new BorderLayout());
+		this.add(getTablePanel(),BorderLayout.CENTER);
+		this.add(getButtonsPanel(), BorderLayout.SOUTH);
+	}
+
+	private JPanel getButtonsPanel() {
+		if(buttonPanel == null)
+		{
+			buttonPanel = new JPanel();
+			buttonPanel.add(getAddButton(), null);
+			buttonPanel.add(getEditButton(), null);
+			buttonPanel.add(getDeleteButton(), null);
+			buttonPanel.add(getDetailsButton(), null);
+		}
+		return buttonPanel;
+	}
+
+	private JButton getDetailsButton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private JButton getDeleteButton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private JButton getEditButton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private JButton getAddButton() {
+		if(addButton == null)
+		{
+			addButton = new JButton;
+			addButton.setText("Добавить");
+		}
+		return addButton;
+	}
+
+	private JPanel getTablePanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

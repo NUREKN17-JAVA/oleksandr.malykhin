@@ -1,0 +1,7 @@
+package UM.malykhin.nure.gui;
+
+import javax.swing.JPanel;
+
+public class EditPanel extends JPanel {
+
+}
