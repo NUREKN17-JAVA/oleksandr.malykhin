@@ -92,6 +92,7 @@ try {
 	}
 	
 	public void testAddUser() {
+		try {
 		String firstName = "Sasha";
 		String lastName = "Malykhin";
 		Date now = new Date();
@@ -131,7 +132,9 @@ try {
 		find(JPanel.class, "browsePanel");
 		userTable = (JTable) find(JTable.class, "userTable");
 		assertEquals(1, userTable.getRowCount());
-		
+		} catch(Exception e) {
+			fail (e.toString());
+		}
 		
 	}
 	

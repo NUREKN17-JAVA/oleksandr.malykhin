@@ -87,7 +87,7 @@ public class EditPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if (fieldPanel == null) {
 			fieldPanel = new JPanel();
-			fieldPanel.setLayout(new GridLayout(2, 3));
+			fieldPanel.setLayout(new GridLayout(3, 2));
 			addLabeledField(fieldPanel, "Name", getFirstNameField());
 			addLabeledField(fieldPanel, "Surname", getLastNameField());
 			addLabeledField(fieldPanel, "Date of birth", getDateOfBirthField());
