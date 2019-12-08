@@ -18,6 +18,7 @@ import javax.swing.JTextField;
 
 import UM.malykhin.nure.User;
 import UM.malykhin.nure.db.UserDao;
+import UM.malykhin.nure.util.Messages;
 import UM.malykhin.nure.db.DaoFactory;
 import UM.malykhin.nure.db.DatabaseException;
 
@@ -40,7 +41,6 @@ public class EditPanel extends JPanel implements ActionListener {
 	}
 	
 	private void initialize(User usr) {
-		// TODO Auto-generated method stub
 		this.setName("editPanel");
 		this.setLayout(new BorderLayout());
 		this.add(getFieldPanel(), BorderLayout.NORTH);
@@ -63,7 +63,7 @@ public class EditPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if (cancelButton == null) {
 			cancelButton = new JButton();
-			cancelButton.setText("Cancel");
+			cancelButton.setText("AddPanel.cancel");
 			cancelButton.setName("cancelButton");
 			cancelButton.setActionCommand("cancel");
 			cancelButton.addActionListener(this);
@@ -75,7 +75,7 @@ public class EditPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if (okButton == null) {
 			okButton = new JButton();
-			okButton.setText("Ok");
+			okButton.setText("AddPanel.ok");
 			okButton.setName("okButton");
 			okButton.setActionCommand("ok");
 			okButton.addActionListener(this);
@@ -88,9 +88,9 @@ public class EditPanel extends JPanel implements ActionListener {
 		if (fieldPanel == null) {
 			fieldPanel = new JPanel();
 			fieldPanel.setLayout(new GridLayout(3, 2));
-			addLabeledField(fieldPanel, "Name", getFirstNameField());
-			addLabeledField(fieldPanel, "Surname", getLastNameField());
-			addLabeledField(fieldPanel, "Date of birth", getDateOfBirthField());
+			addLabeledField(fieldPanel, Messages.getString("AddPanel.first_name"), getFirstNameField()); //$NON-NLS-1$
+			addLabeledField(fieldPanel, Messages.getString("AddPanel.last_name"), getLastNameField()); //$NON-NLS-1$
+			addLabeledField(fieldPanel, Messages.getString("AddPanel.date_of_birth"), getDateOfBirthField()); //$NON-NLS-1$
 		}
 		return fieldPanel;
 	}
@@ -167,4 +167,5 @@ public class EditPanel extends JPanel implements ActionListener {
 		getDateOfBirthField().setText(formatter.format(this.user.getDateOfBirth()));
 		getDateOfBirthField().setBackground(bgColor);
 	}
+
 }

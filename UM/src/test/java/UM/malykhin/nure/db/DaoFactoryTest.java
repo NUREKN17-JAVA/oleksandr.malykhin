@@ -19,8 +19,5 @@ public class DaoFactoryTest extends TestCase {
 			fail(e.toString());
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> gui
+

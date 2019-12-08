@@ -36,7 +36,6 @@ public class DeletePanel extends JPanel implements ActionListener {
 	}
 	
 	private void initialize(User usr) {
-		// TODO Auto-generated method stub
 		this.setName("deletePanel");
 		this.setLayout(new BorderLayout());
 		this.add(getTextPanel(), BorderLayout.NORTH);
@@ -45,7 +44,6 @@ public class DeletePanel extends JPanel implements ActionListener {
 		this.user = usr;
 	}
 	private JPanel getButtonPanel() {
-		// TODO Auto-generated method stub
 		if (buttonPanel == null) {
 			buttonPanel = new JPanel();
 			buttonPanel.add(getOkButton(), null);
@@ -55,19 +53,17 @@ public class DeletePanel extends JPanel implements ActionListener {
 	}
 	
 	private JPanel getTextPanel() {
-		// TODO Auto-generated method stub
 		if (buttonPanel == null) {
 			buttonPanel = new JPanel();
-			buttonPanel.add(getSureText(), null);
+			buttonPanel.add(getComfirmationText(), null);
 		}
 		return buttonPanel;
 	}
 
 	private JButton getCancelButton() {
-		// TODO Auto-generated method stub
 		if (cancelButton == null) {
 			cancelButton = new JButton();
-			cancelButton.setText("Cancel");
+			cancelButton.setText("AddPanel.cancel");
 			cancelButton.setName("cancelButton");
 			cancelButton.setActionCommand("cancel");
 			cancelButton.addActionListener(this);
@@ -76,10 +72,9 @@ public class DeletePanel extends JPanel implements ActionListener {
 	}
 
 	private JButton getOkButton() {
-		// TODO Auto-generated method stub
 		if (okButton == null) {
 			okButton = new JButton();
-			okButton.setText("Ok");
+			okButton.setText("AddPanel.ok");
 			okButton.setName("okButton");
 			okButton.setActionCommand("ok");
 			okButton.addActionListener(this);
@@ -87,11 +82,10 @@ public class DeletePanel extends JPanel implements ActionListener {
 		return okButton;
 	}
 	
-	private JLabel getSureText() {
-		// TODO Auto-generated method stub
+	private JLabel getComfirmationText() {
 		if (sureText == null) {
 			sureText = new JLabel();
-			sureText.setText("Are you sure to delete this user?");
+			sureText.setText("Delete this user?");
 			sureText.setName("sureText");
 		}
 		return sureText;
@@ -99,12 +93,10 @@ public class DeletePanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		if ("ok".equalsIgnoreCase(e.getActionCommand())) {
 			try {
 				userDao.delete(this.user);
 			} catch (DatabaseException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}

@@ -18,136 +18,125 @@ import javax.swing.JTextField;
 
 import UM.malykhin.nure.User;
 import UM.malykhin.nure.db.UserDao;
+import UM.malykhin.nure.util.Messages;
 import UM.malykhin.nure.db.DaoFactory;
 import UM.malykhin.nure.db.DatabaseException;
 
-public class DetailsPanel extends JPanel implements ActionListener {
+public class DetailsPanel  extends JPanel implements ActionListener {
 	private MainFrame parent;
-	private JPanel buttonPanel;
-	private JPanel fieldPanel;
-	private JButton cancelButton;
-	private JButton okButton;
-	private JTextField dateOfBirthField;
-	private JTextField lastNameField;
-	private JTextField firstNameField;
-	private Color bgColor;
 	private User user;
-	private UserDao userDao;
-	
-	public DetailsPanel(MainFrame parent, User usr) {
-		this.parent = parent;
-		initialize(usr);
+
+	private JLabel idLabel;
+	private JLabel firstNameLabel;
+	private JLabel lastNameLabel;
+	private JLabel birthDateLabel;
+	private JButton cancelButton;
+
+	private JPanel infoPanel;
+
+	public void SetUser(User user) {
+		this.user = user;
+		this.setLabelsText();
 	}
-	
-	private void initialize(User usr) {
-		// TODO Auto-generated method stub
+
+	public DetailsPanel(MainFrame mainFrame, User user) {
+		this.parent = mainFrame;
+		this.user = user;
+		this.initialize();
+	}
+
+	private void initialize() {
 		this.setName("detailsPanel");
 		this.setLayout(new BorderLayout());
-		this.add(getFieldPanel(), BorderLayout.NORTH);
-		this.add(getButtonPanel(), BorderLayout.SOUTH);
-		userDao = DaoFactory.getInstance().getUserDao();
-		this.user = usr;
-		setFields();
+		this.add(getInfoPanel(), BorderLayout.CENTER);
+		this.add(getCancelButton(), BorderLayout.AFTER_LAST_LINE);
+		this.setLabelsText();
 	}
-	
-	private JPanel getButtonPanel() {
-		// TODO Auto-generated method stub
-		if (buttonPanel == null) {
-			buttonPanel = new JPanel();
-			buttonPanel.add(getOkButton(), null);
-			buttonPanel.add(getCancelButton(), null);
+
+	private JPanel getInfoPanel() {
+		if (this.infoPanel == null) {
+			this.infoPanel = new JPanel();
+			this.infoPanel.setLayout(new GridLayout(5, 2));
+			this.addLabelField(infoPanel, "ID", getIdLabel());
+			this.addLabelField(infoPanel, "First name", getFirstNameLabel());
+			this.addLabelField(infoPanel, "Last name", getLastNameLabel());
+			this.addLabelField(infoPanel, "Birth date", getBirthDateLabel());
 		}
-		return buttonPanel;
+		return this.infoPanel;
+	}
+
+	private JLabel getIdLabel() {
+		if (this.idLabel == null) {
+			this.idLabel = new JLabel();
+			this.idLabel.setName("idLabel");
+
+		}
+		return this.idLabel;
+	}
+
+	private JLabel getFirstNameLabel() {
+		if (this.firstNameLabel == null) {
+			this.firstNameLabel = new JLabel();
+			this.firstNameLabel.setName("firstNameLabel");
+
+		}
+		return this.firstNameLabel;
+	}
+
+	private JLabel getLastNameLabel() {
+		if (this.lastNameLabel == null) {
+			this.lastNameLabel = new JLabel();
+			this.lastNameLabel.setName("lastNameLabel");
+
+		}
+		return this.lastNameLabel;
+	}
+
+	private JLabel getBirthDateLabel() {
+		if (this.birthDateLabel == null) {
+			this.birthDateLabel = new JLabel();
+			this.birthDateLabel.setName("birthDateLabel");
+
+		}
+		return this.birthDateLabel;
+	}
+
+	private void addLabelField(JPanel panel, String text, JLabel outLabel) {
+		JLabel label = new JLabel(text);
+		label.setLabelFor(outLabel);
+		panel.add(label);
+		panel.add(outLabel);
 	}
 
 	private JButton getCancelButton() {
-		// TODO Auto-generated method stub
-		if (cancelButton == null) {
-			cancelButton = new JButton();
-			cancelButton.setText("Cancel");
-			cancelButton.setName("cancelButton");
-			cancelButton.setActionCommand("cancel");
-			cancelButton.addActionListener(this);
+		if (this.cancelButton == null) {
+			this.cancelButton = new JButton();
+			this.cancelButton.setText(Messages.getString("AddPanel.cancel")); //$NON-NLS-1$
+			this.cancelButton.setName("cancelButton"); //$NON-NLS-1$
+			this.cancelButton.setActionCommand("cancel"); //$NON-NLS-1$
+			this.cancelButton.addActionListener(this);
 		}
-		return cancelButton;
+		return this.cancelButton;
 	}
 
-	private JButton getOkButton() {
-		// TODO Auto-generated method stub
-		if (okButton == null) {
-			okButton = new JButton();
-			okButton.setText("Ok");
-			okButton.setName("okButton");
-			okButton.setActionCommand("ok");
-			okButton.addActionListener(this);
-		}
-		return okButton;
+	private void setLabelsText() {
+
+		String date = "";
+		DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+		date = formatter.format(user.getDateOfBirth());
+		this.birthDateLabel.setText(date);
+
+		this.lastNameLabel.setText(user.getLastName());
+
+		this.firstNameLabel.setText(user.getFirstName());
+
+		this.idLabel.setText(Long.toString(user.getId()));
 	}
 
-	private JPanel getFieldPanel() {
-		// TODO Auto-generated method stub
-		if (fieldPanel == null) {
-			fieldPanel = new JPanel();
-			fieldPanel.setLayout(new GridLayout(2, 3));
-			addLabeledField(fieldPanel, "Name", getFirstNameField());
-			addLabeledField(fieldPanel, "Surname", getLastNameField());
-			addLabeledField(fieldPanel, "Date of birth", getDateOfBirthField());
-		}
-		return fieldPanel;
-	}
-
-	private JTextField getDateOfBirthField() {
-		// TODO Auto-generated method stub
-		if (dateOfBirthField == null) {
-			dateOfBirthField = new JTextField();
-			dateOfBirthField.setName("dayOfBirthField");
-		}
-		return dateOfBirthField;
-	}
-
-	private JTextField getLastNameField() {
-		// TODO Auto-generated method stub
-		if (lastNameField == null) {
-			lastNameField = new JTextField();
-			lastNameField.setName("lastNameField");
-		}
-		return lastNameField;
-	}
-
-	private void addLabeledField(JPanel panel, String labelText, JTextField textField) {
-		// TODO Auto-generated method stub
-		JLabel label = new JLabel(labelText);
-		label.setLabelFor(textField);
-		panel.add(label);
-		panel.add(textField);
-	}
-
-	private JTextField getFirstNameField() {
-		// TODO Auto-generated method stub
-		if (firstNameField == null) {
-			firstNameField = new JTextField();
-			firstNameField.setName("firstNameField");
-		}
-		return firstNameField;
-	}
-
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		this.setVisible(false);
 		parent.showBrowsePanel();
 	}
 
-	private void setFields() {
-		// TODO Auto-generated method stub
-		getFirstNameField().setText(this.user.getFirstName());
-		getFirstNameField().setBackground(bgColor);
-		
-		getLastNameField().setText(this.user.getLastName());
-		getLastNameField().setBackground(bgColor);
-		
-		Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		getDateOfBirthField().setText(formatter.format(this.user.getDateOfBirth()));
-		getDateOfBirthField().setBackground(bgColor);
-	}
+
 }

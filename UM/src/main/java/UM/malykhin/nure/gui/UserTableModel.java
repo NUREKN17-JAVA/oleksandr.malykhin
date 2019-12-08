@@ -59,4 +59,9 @@ public class UserTableModel extends AbstractTableModel {
 		return null;
 	}
 
+	public User getUser(int selectedRow) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
