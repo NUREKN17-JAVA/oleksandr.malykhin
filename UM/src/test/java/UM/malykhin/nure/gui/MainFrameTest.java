@@ -226,7 +226,7 @@ try {
 		assertEquals(1, table.getRowCount());
 	}
 
-	public void testEditUserOk() { 
+	public void testEditUser() { 
 		find(JPanel.class, BROWSE_PANEL_COMPONENT_NAME);
 
         User expectedUser = new User(new Long(1),FIRST_NAME, LAST_NAME, DATE_OF_BIRTH);

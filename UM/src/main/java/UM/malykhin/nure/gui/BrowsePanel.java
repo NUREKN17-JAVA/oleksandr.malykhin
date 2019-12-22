@@ -111,15 +111,6 @@ public class BrowsePanel extends JPanel implements ActionListener {
 			userTable = new JTable();
 			userTable.setName(USER_TABLE_COMPONENT_NAME);
 		}
-//		UserTableModel model;
-//		try {
-//			model = new UserTableModel(parent.getDao().findAll());
-//		}
-//		catch(DataBaseException e) {
-//			model = new UserTableModel(new ArrayList());
-//			JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-//		}
-//		userTable.setModel(model);
 		return userTable;
 	}
 	
