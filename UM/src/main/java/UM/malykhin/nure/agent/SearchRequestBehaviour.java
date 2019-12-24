@@ -9,7 +9,6 @@ public class SearchRequestBehaviour extends Behaviour {
 	private AID[] aids;
 	private String firstName;
 	private String lastName;
-	
 
 	public SearchRequestBehaviour (AID[] aids, String firstName, String lastName) {
 		this.firstName = firstName;
@@ -27,7 +26,6 @@ public class SearchRequestBehaviour extends Behaviour {
 			myAgent.send(message);
 		}
 	}
-
 	@Override
 	public boolean done() {
 		return true;

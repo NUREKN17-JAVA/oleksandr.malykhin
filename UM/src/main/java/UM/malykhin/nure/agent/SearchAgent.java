@@ -22,12 +22,58 @@ public class SearchAgent extends Agent {
 	
 	protected void setup() {
 		super.setup();
-		System.out.println(getAID().getName() + " started");
+        System.out.println(getAID().getName() + " started");
+
+        gui = new SearchGui(this);
+        gui.setVisible(true);
+
+        DFAgentDescription description = new DFAgentDescription();
+        description.setName(getAID());
+        ServiceDescription serviceDescription = new ServiceDescription();
+        serviceDescription.setName("JADE-searching");
+        serviceDescription.setType("searching");
+        description.addServices(serviceDescription);
+
+        try {
+            DFService.register(this, description);
+        } catch (FIPAException e) {
+            e.printStackTrace();
+        }
+
+        addBehaviour(new RequestServer());
+        
+        addBehaviour(new TickerBehaviour(this, 60000) {
+            @Override
+            protected void onTick() {
+                DFAgentDescription agentDescription = new DFAgentDescription();
+                ServiceDescription serviceDescription = new ServiceDescription();
+
+                serviceDescription.setType("searching");
+                agentDescription.addServices(serviceDescription);
+
+                try {
+                    DFAgentDescription[] descriptions = DFService.search(myAgent, agentDescription);
+                    aids = new AID[descriptions.length];
+
+                    for (int i = 0; i < descriptions.length; i++) {
+                        DFAgentDescription description1 = descriptions[i];
+                        aids[i] = description1.getName();
+                    }
+
+                } catch (FIPAException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 	}
 	
 	protected void takeDown() {
 		System.out.println(getAID().getName() + " terminated");
-		super.takeDown();
+		try {
+            DFService.deregister(this);
+        } catch (FIPAException e) {
+            e.printStackTrace();
+        }
 	}
 	
 	public void search(String firstName, String lastName) throws SQLException {
