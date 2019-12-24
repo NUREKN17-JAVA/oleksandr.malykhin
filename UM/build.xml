@@ -42,11 +42,9 @@
 				<include name="**/*.xml"/>
 			</fileset>
 		</copy>
-		<!-- скопировать все jsp -->
 		<copy todir="$(war-jsp-dir)">
 			<fileset dir="$(main-webapp-dir)"/>
 		</copy>
-		<!-- скопировать все либы -->
 		<copy todir="$(war-lib-dir)">
 			<fileset dir="$(lib-dir)">
 				<include name="hsqldb*.jar"/>
@@ -54,11 +52,9 @@
 				<include name="standard*.jar"/>
 			</fileset>
 		</copy>
-		<!-- скопировать все конфиги -->
 		<copy todir="$(war-classes-dir)">
 			<fileset dir="$(main-resources-dir)"/>
 		</copy>
-		<!-- скопировать все классы -->
 		<copy todir="$(war-classes-dir)">
 			<fileset dir="$(classes-dir)"/>
 		</copy>
@@ -77,9 +73,7 @@
 			</webinf>
 		</war>
 	</target>
-	
 	<target name="war.exploded" depends="compile"></target>
-	
 	<target name="test-compile" depends="compile">
 		<javac srcdir="${test-java-dir}" destdir="${classes-dir}">
 			<classpath>
@@ -93,7 +87,6 @@
 			</fileset>
 		</copy>
 	</target>
-	
 	<target name="test" depends="test-compile">
 		<junit>
 			<classpath>
